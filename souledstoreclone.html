@@ -26,12 +26,10 @@
 
         }
         .logo img {
-            display: flex;
-            height: 50px;
-            width: auto;
-            position: absolute;
-            left: 50%;
-            transform: translateX(-50%);
+          height: 50px;
+    width: auto;
+    display: block;
+    margin: 0 auto;
         }
         .category {
             display: flex;
@@ -86,9 +84,9 @@
   }
 
   .category, .others {
-    width: 100%;
-    justify-content: center;
-    margin: 5px 0;
+   flex: 1;
+    display: flex;
+    align-items: center;
   }
 
   .logo img {
