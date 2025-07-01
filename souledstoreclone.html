@@ -1,0 +1,566 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Souled Store</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+<link rel="icon" href="logo.png" type="image/png">
+    <style>
+        *{
+            font-family: sans-serif;
+            
+          
+        }
+        .headerbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #f8f8f8;
+            padding: 10px 20px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            height: 40px;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+           z-index: 1000
+
+        }
+        .logo img {
+            display: flex;
+            height: 50px;
+            width: auto;
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        .category {
+            display: flex;
+            align-items: center;
+            width: 30%;
+            
+        }
+        .threelines {
+            margin-left: 15px;
+            width: 20px;
+            height: 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 30px;
+            padding: 5px;
+            }
+        .men {
+            font-size: 20px;
+            
+        
+          margin-right: 15px;
+          
+            font-weight: bold;
+        }
+           .women {
+            font-size: 20px;
+          
+          margin-right: 15px;
+      
+            font-weight: bold;
+        }
+        .others{
+            
+        display: flex;
+        align-items: center;
+       justify-content: space-between;
+
+        width: 30%;
+}
+      .icons{
+        display: flex;}
+        .icons img {
+            height: 30px;
+            margin-left: 20px;
+        }
+
+  
+  .searchbar {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+
+.searchbar i {
+  position: absolute;
+ right: 10px;
+  color: gray;
+
+
+}
+
+.searchbar input {
+  padding-right: 65px; 
+  height: 30px;
+  border-radius: 55px;
+  border: 1px solid #ccc;}
+  .searchbar .mic {
+  right: 10px;
+}
+
+.searchbar .search {
+  right: 35px;
+}
+.Designersdesk{
+    margin-bottom: 10px;
+   
+}
+.Designersdesk h1{
+    text-align: center;
+    font-size: 20px;
+    margin-top: 20px;
+}
+    .slider-container {
+      position: relative;
+      width: 100%;
+      max-width: 100%;}
+      .slider-container .slidebanner {
+        display: flex;
+        overflow: hidden;
+        width: 100%;
+      }
+.newarrivalshead{
+    text-align: center;
+    font-size: 20px;
+    margin-top: 30px;
+    color: #363d5f;
+    padding: 10px;
+    font-weight:600;
+}
+.newarrivals {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 15px;
+    padding: 10px 20px;
+}
+.imgarrival{
+    width: 23%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.imgarrival img {
+    width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 8px;
+}
+.infonewarrival {
+   padding-top: 10px;
+  font-size: 14px;
+  color: #333;
+}
+.infonewarrival h4 {
+     font-size: 16px;
+  margin-bottom: 4px;
+  font-weight: 600;
+}
+.parentcategory {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 20px;
+}
+.childcategory {
+    width: 23%;
+   margin: 0.5%;
+   
+}
+.childcategory img {
+  transition: transform 0.3s ease;
+}
+.childcategory:hover img {
+  transform: scale(1.05);
+  cursor: pointer;
+}
+.top10container {
+  display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 15px;
+    padding: 10px 20px;
+}
+.top10item {
+     width: 23%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.top10item {
+  display: none;
+}
+
+.top10item:nth-child(-n+4) {
+  display: flex;
+}
+.happycustomers {
+    text-align: center;
+    font-size: 48px;
+    margin-top: 10px;
+    color: black;
+    padding: 10px;
+}
+.footer {
+  display: flex;
+  justify-content: space-around;
+  align-items:flex-start;
+  background-color: #ccc;
+
+  margin-bottom: 0px;
+}
+.Needhelp,
+.COMPANY {
+  padding-top: 20px;
+}
+.homegroundbanner {
+  
+
+  padding: 10px 0;
+  margin-top: 30px;
+  width: 100%;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 60px; /* Fixed height */
+  box-sizing: border-box;
+}
+
+
+
+
+
+
+
+        
+
+        
+.designers{
+    margin-top: 10px;;
+}
+    </style>
+    
+</head>
+<body>
+<div class="headerbar">
+
+    <div class="category">
+        <div class="threelines">
+         <img src="threelines.svg" alt="threelines"></div>
+        
+         <div class="men">MEN</div>
+   
+    
+         <div class="women">WOMEN</div></div>
+
+
+
+
+    <div class="logo" style=" height: 50px;"> <img src="non-member-logo2.4f4c390.gif"  >
+    </div>
+
+    <div class="others"> 
+        <div class="searchbar">
+              <i class="fa-solid fa-magnifying-glass search" style="color: gray;"></i>
+              <i class="fa-solid fa-microphone mic"></i>
+      
+             
+            <input type="text" placeholder="What are you looking for?" >
+            
+
+        </div>  
+        <div class="icons">
+            <img src="track.svg" style="height: 25px;"><br>
+
+            <img src="profile.svg" style="height: 25px;;"><br>
+                <img src="liked.svg" style="height: 25px;"><br>
+           
+            
+            <img src="cart.svg" style="height: 28px;">
+
+        
+
+        </div> </div>
+
+    
+
+</div>
+<div class="bancontainer">
+  <div class="slider-container">
+   <div class="slidebanner">
+    <img src="banner1.webp" style="width: 100%;">
+    <img src="mainban2.webp" style="width: 100%;">
+    <img src="mainban3.webp" style="width: 100%;"> 
+    <img src="mainban4.webp" style="width: 100%;">
+    <img src="mainban5.webp" style="width: 100%;">
+    <img src="mainban6.webp" style="width: 100%;">
+    <img src="mainban7.webp" style="width: 100%;"></div>
+    </div>
+</div>
+
+
+
+
+
+    <div class="controls">
+    <button id="prev">&#10094;</button>
+    <button id="next">&#10095;</button>
+  </div>
+</div>
+<div class="Designersdesk">
+    <h1 style="text-align: center; font-size: 30px; margin-top: 20px; color: #363d5f;;">DESIGNER'S DESK</h1></div><br>
+  
+
+ 
+    <div class="designersimg">
+        <img src="desdeskbanner.webp" alt="Designer 1" style="width: 33%; height: auto;">
+        <img src="desdeskb2.webp" alt="Designer 2" style="width: 33%; height: auto;">
+        <img src="desseskban3.webp" alt="Designer 3" style="width: 33%; height: auto;">
+    </div>
+
+<div class="newarrivalshead">
+    <h1>NEW ARRIVALS</h1>
+</div>
+<div class="newarrivals">
+    <div class="imgarrival"><img src="newarrivalsimg1.webp" alt="New Arrival 1" style=" height:auto;">
+        <div class="infonewarrival">
+             <h4>Linen Shirt: Grey Mist</h4>
+             <p class="category">Oversized Shirts</p>
+             <p class="price">₹1499</p>
+
+        </div></div>
+
+
+
+
+
+
+
+   <div class="imgarrival"> <img src="newarrivalsimg2.webp" alt="New Arrival 2" style=" height: auto;"><div class="infonewarrival">
+             <h4>Linen Shirt: Grey Mist</h4>
+             <p class="category">Oversized Shirts</p>
+             <p class="price">₹1499</p>
+
+        </div></div>
+    <div class="imgarrival"><img src="newarivalsimg3.webp" alt="New Arrival 3" style=" height: auto;"><div class="infonewarrival">
+             <h4>Linen Shirt: Grey Mist</h4>
+             <p class="category">Oversized Shirts</p>
+             <p class="price">₹1499</p>
+
+        </div></div>
+    <div class="imgarrival"><img src="newarrivalimg4.webp" alt="New Arrival 4" style=" height: auto;"><div class="infonewarrival">
+             <h4>Linen Shirt: Grey Mist</h4>
+             <p class="category">Oversized Shirts</p>
+             <p class="price">₹1499</p>
+
+        </div></div>
+
+    
+    
+    
+    
+    </div>
+
+
+<div class="Categories">
+    <h1 style="text-align: center; font-size: 30px; margin-top: 20px; color: #363d5f;;">CATEGORIES</h1>
+   <div class="parentcategory">
+      <div class="childcategory">
+        <img src="categoriesimg1.webp" alt="Category 1" style="width: 100%; height: auto;"></div>
+
+
+         <div class="childcategory">
+        <img src="categoriesimg2.webp" alt="Category 1" style="width: 100%; height: auto;"></div>
+
+         <div class="childcategory">
+        <img src="categoriesimg3.webp" alt="Category 1" style="width: 100%; height: auto;"></div>
+
+         <div class="childcategory">
+        <img src="categoriesimg4.webp" alt="Category 1" style="width: 100%; height: auto;"></div>
+
+         <div class="childcategory">
+        <img src="categoriesimg5.webp" alt="Category 1" style="width: 100%; height: auto;"></div>
+
+         <div class="childcategory">
+        <img src="categoriesimg6.webp" alt="Category 1" style="width: 100%; height: auto;"></div>
+
+         <div class="childcategory">
+        <img src="categoriesimg7.webp" alt="Category 1" style="width: 100%; height: auto;"></div>
+
+         <div class="childcategory">
+        <img src="categoriesimg8.webp" alt="Category 1" style="width: 100%; height: auto;"></div>
+
+         <div class="childcategory">
+        <img src="categoriesimg9.webp" alt="Category 1" style="width: 100%; height: auto;"></div>
+
+         <div class="childcategory">
+        <img src="categoriesimg10.webp" alt="Category 1" style="width: 100%; height: auto;"></div>
+
+         <div class="childcategory">
+        <img src="categoriesimg11.webp" alt="Category 1" style="width: 100%; height: auto;"></div>
+
+         <div class="childcategory">
+        <img src="categoriesimg12.webp" alt="Category 1" style="width: 100%; height: auto;"></div>
+
+     
+
+        
+     
+ 
+
+
+
+
+   </div>
+
+
+
+
+
+
+
+
+
+</div>
+
+
+<div class="top10head">
+    <h1 style="text-align: center; font-size: 30px; margin-top: 20px; color: #363d5f;;">TOP 10 PICKS OF THE WEEK</h1>
+    <div class="top10container">
+        <div class="top10item">
+            <img src="top10(1).webp" alt="Top 10 Item 1" style="width: 100%; height: auto;">
+            <h4>DAREDEVIL:NO FEAR</h4>
+            <p class="category"> Oversized T-Shirts</p>
+            <p class="price">₹999</p>
+
+    </div>
+       <div class="top10item">
+            <img src="top10(2).webp" alt="Top 10 Item 1" style="width: 100%; height: auto;">
+            <h4>DAREDEVIL:NO FEAR</h4>
+            <p class="category"> Oversized T-Shirts</p>
+            <p class="price">₹999</p>
+
+    </div>
+       <div class="top10item">
+            <img src="to10(3).webp" alt="Top 10 Item 1" style="width: 100%; height: auto;">
+            <h4>DAREDEVIL:NO FEAR</h4>
+            <p class="category"> Oversized T-Shirts</p>
+            <p class="price">₹999</p>
+
+    </div>
+     <div class="top10item">
+            <img src="top10(4).webp" alt="Top 10 Item 1" style="width: 100%; height: auto;">
+            <h4>DAREDEVIL:NO FEAR</h4>
+            <p class="category"> Oversized T-Shirts</p>
+            <p class="price">₹999</p>
+
+    </div>
+     <div class="top10item">
+            <img src="top10(5).webp" alt="Top 10 Item 1" style="width: 100%; height: auto;">
+            <h4>DAREDEVIL:NO FEAR</h4>
+            <p class="category"> Oversized T-Shirts</p>
+            <p class="price">₹999</p>
+
+    </div>
+     <div class="top10item">
+            <img src="top10(6).webp" alt="Top 10 Item 1" style="width: 100%; height: auto;">
+            <h4>DAREDEVIL:NO FEAR</h4>
+            <p class="category"> Oversized T-Shirts</p>
+            <p class="price">₹999</p>
+
+    </div>
+     <div class="top10item">
+            <img src="top10(7).webp" alt="Top 10 Item 1" style="width: 100%; height: auto;">
+            <h4>DAREDEVIL:NO FEAR</h4>
+            <p class="category"> Oversized T-Shirts</p>
+            <p class="price">₹999</p>
+
+    </div>
+     <div class="top10item">
+            <img src="top10(8).webp" alt="Top 10 Item 1" style="width: 100%; height: auto;">
+            <h4>DAREDEVIL:NO FEAR</h4>
+            <p class="category"> Oversized T-Shirts</p>
+            <p class="price">₹999</p>
+
+    </div>
+     <div class="top10item">
+            <img src="top10(9).webp" alt="Top 10 Item 1" style="width: 100%; height: auto;">
+            <h4>DAREDEVIL:NO FEAR</h4>
+            <p class="category"> Oversized T-Shirts</p>
+            <p class="price">₹999</p>
+
+    </div>
+     <div class="top10item">
+            <img src="top10(10).webp" alt="Top 10 Item 1" style="width: 100%; height: auto;">
+            <h4>DAREDEVIL:NO FEAR</h4>
+            <p class="category"> Oversized T-Shirts</p>
+            <p class="price">₹999</p>
+
+    </div>
+    <!-- <button id="showMoreBtn">Show More</button> -->
+</div>
+
+
+
+
+</div>
+<div class="homegroundbanner" style="background-color: red;"><p style="color: white; font-size: 40px; text-align: center;">HOMEGROUND INDIAN BRAND</p></div>
+<div class="happycustomers"><p>Over <b>6 Million</b> Happy Customers</p></div>
+
+
+
+
+
+<div class="footer">
+  <div class="Needhelp" style="font-family: Arial, Helvetica, sans-serif;">
+    <p style="color: red; font-size: 20px; font-weight:bold;">NEED HELP</p>
+    <p>Contact Us</p>
+    <p>Track Order</p>
+    <p>Returns</p>
+    <p>FAQ'S</p>
+    <p>My Account</p>
+    <!-- <p style="color: #cccccc5a;"><b>COD available</b></p>
+    <p style="color: #cccccc7a;"><b>30 days easy returns and exchanges</b></p> -->
+  </div>
+  <div class="COMPANY">
+    <p style="color: red; font-size: 20px; font-weight:bold; " >COMPANY</p>
+    <p>About Us</p>
+    <p>Investor Relation</p>
+    <p>Career</p>
+    <p>Gift Vouchers</p>
+    <p>Community Initiatives</p>
+   
+  </div>
+  <div class="moreinfo" style="padding-top: 20px;">
+    <p style="color: red; font-size: 20px; font-weight:bold;">MORE INFO</p>
+     <p>T&C</p>
+    <p>Privacy Policy</p>
+    <p>Site Map</p>
+    <p> Get notified</p>
+    <p>Blogs</p>
+  </div>
+</div>
+
+
+
+
+
+
+</body>
+<script>
+    let slider=document.getElementsByClassName("slider-container");
+    let slides=document.querySelectorAll(".slidebanner");
+
+
+
+
+
+</script>
