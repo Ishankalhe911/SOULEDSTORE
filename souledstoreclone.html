@@ -233,6 +233,28 @@
   height: 60px; /* Fixed height */
   box-sizing: border-box;
 }
+        <style>
+/* Add this to your CSS */
+.designersimg {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  padding: 10px;
+}
+
+.designersimg img {
+  width: 30%;
+  max-width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+@media (max-width: 768px) {
+  .designersimg img {
+    width: 90%;
+  }
+}
 
 
 
