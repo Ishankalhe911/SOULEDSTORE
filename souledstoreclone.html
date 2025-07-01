@@ -251,10 +251,77 @@
 }
 
 @media (max-width: 768px) {
-  .designersimg img {
+  .designers img {
     width: 90%;
   }
 }
+        @media (max-width: 768px) {
+  /* Responsive adjustments for mobile */
+  .headerbar {
+    flex-direction: column;
+    align-items: center;
+    height: auto;
+    padding: 10px 0;
+  }
+
+  .category {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-bottom: 10px;
+    gap: 10px;
+  }
+
+  .logo img {
+    position: static;
+    transform: none;
+    height: 40px;
+    margin: 10px 0;
+  }
+
+  .others {
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    gap: 8px;
+    margin-top: 10px;
+  }
+
+  .searchbar {
+    width: 90%;
+    justify-content: center;
+  }
+
+  .searchbar input {
+    width: 100%;
+  }
+
+  .icons {
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+  }
+
+  .icons img {
+    height: 20px;
+    margin: 0 5px;
+  }
+
+  .men, .women {
+    font-size: 16px;
+    font-weight: bold;
+  }
+
+  .threelines {
+    margin: 0;
+    width: 20px;
+  }
+
+  body {
+    padding-top: 140px; /* adjust this to prevent content hiding behind header */
+  }
+}
+
 
 
 
